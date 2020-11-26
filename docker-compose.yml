@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  contentuser-mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'Example'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '22010:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql-volume:/var/lib/mysql
+volumes:  
+  mysql-volume:
